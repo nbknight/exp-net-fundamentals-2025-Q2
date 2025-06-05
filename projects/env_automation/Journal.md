@@ -32,6 +32,8 @@ Documentation link for installation: https://docs.aws.amazon.com/cli/latest/user
 
 Verified installation with `aws sts get-caller-identity` which can be found at: https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html
 
-## Resource Map
-Added resource map
+## Deployed Resource to AWS
+
+Added resource map of VPC deployed with CFN.
 ![AWS VPC Resource Map](assets/aws_vpc_resource_map.png)
+![AWS CFN Console](assets/aws_cfn_console.png)
