@@ -3,19 +3,21 @@
 # Exit on error
 set -e
 
-# Set variables
-STACK_NAME="MyVPCStack"
-TEMPLATE_FILE="vpc-template.yaml"  # Path to your CloudFormation template file
+# === Configuration ===
+STACK_NAME="net-boot-vpc"
+TEMPLATE_FILE="../template.yaml"  # Path to your CloudFormation template file
+REGION="us-east-1"
 
 # Parameters
 VPC_CIDR="10.200.123.0/24"
 PUBLIC_SUBNET_CIDR="10.200.123.0/26"
 PRIVATE_SUBNET_CIDR="10.200.123.64/26"
 AVAILABILITY_ZONE="us-east-1a"
-REGION="us-east-1"
+
 
 # Deploy the CloudFormation stack
 # https://docs.aws.amazon.com/cli/latest/reference/cloudformation/deploy/
+
 aws cloudformation deploy \
   --stack-name "$STACK_NAME" \
   --template-file "$TEMPLATE_FILE" \
@@ -37,6 +39,6 @@ echo "Stack $STACK_NAME deployed successfully."
 # Print outputs
 aws cloudformation describe-stacks \
   --stack-name "$STACK_NAME" \
-  --region "REGION" \
+  --region "$REGION" \
   --query "Stacks[0].Outputs" \
   --output table

@@ -25,3 +25,9 @@ I had it change the the shebang to be OS agnostic
 
 I thought maybe we could visulaize our VPC via AWS Infra Composer, but it's not the best representation.
 ![AWS Infrastructure Graphic](assets/aws_infra_composer.png)
+
+## Verified installation of AWS CLI
+
+Documentation link for installation: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+Verified installation with `aws sts get-caller-identity` which can be found at: https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html
