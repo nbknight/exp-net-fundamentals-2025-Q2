@@ -31,3 +31,7 @@ I thought maybe we could visulaize our VPC via AWS Infra Composer, but it's not 
 Documentation link for installation: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 Verified installation with `aws sts get-caller-identity` which can be found at: https://docs.aws.amazon.com/cli/latest/reference/sts/get-caller-identity.html
+
+## Resource Map
+Added resource map
+![AWS VPC Resource Map](assets/aws_vpc_resource_map.png)
