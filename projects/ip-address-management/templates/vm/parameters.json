@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus2"
+    },
+    "vmName": {
+      "value": "netfunwin25"
+    },
+    "vmSize": {
+      "value": "Standard_D2s_v3"
+    },
+    "adminUsername": {
+      "value": "adminuser"
+    },
+    "adminPassword": {
+      "value": "Insert password here"
+    },
+    "publicIpSku": {
+      "value": "Basic"
+    },
+    "osDiskStorageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "imagePublisher": {
+      "value": "MicrosoftWindowsServer"
+    },
+    "imageOffer": {
+      "value": "WindowsServer"
+    },
+    "imageSku": {
+      "value": "2025-datacenter-azure-edition"
+    },
+    "imageVersion": {
+      "value": "latest"
+    },
+    "vnetAddressPrefix": {
+      "value": "10.0.0.0/16"
+    },
+    "subnetAddressPrefix": {
+      "value": "10.0.0.0/24"
+    }
+  }
+}
