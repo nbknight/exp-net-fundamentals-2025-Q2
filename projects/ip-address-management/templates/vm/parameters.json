@@ -15,7 +15,7 @@
       "value": "adminuser"
     },
     "adminPassword": {
-      "value": "Testing123456!"
+      "value": "Insert password here"
     },
     "publicIpSku": {
       "value": "Basic"
