@@ -80,3 +80,13 @@ template                                                          Succeeded  202
 ```
 
 ![Deployment Confirmation via Bicep](./assets/azure_vm_deployment_via_bicep.png)
+
+### ***Note*** - Had to change the name to netfunwin25 for the resources due to character length restrictions.
+
+## Clean up resources
+
+Delete the resources so they aren't charging you money after the lesson.
+
+```sh
+az group delete --name net-fun-bootcamp --yes --no-wait
+```
