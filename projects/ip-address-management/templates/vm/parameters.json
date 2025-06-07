@@ -1,113 +1,45 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "location": {
-            "value": "eastus2"
-        },
-        "networkInterfaceName1": {
-            "value": "net-fun-windows-server652_z1"
-        },
-        "networkSecurityGroupName": {
-            "value": "net-fun-windows-server-nsg"
-        },
-        "networkSecurityGroupRules": {
-            "value": [
-                {
-                    "name": "RDP",
-                    "properties": {
-                        "priority": 300,
-                        "protocol": "TCP",
-                        "access": "Allow",
-                        "direction": "Inbound",
-                        "sourceAddressPrefix": "*",
-                        "sourcePortRange": "*",
-                        "destinationAddressPrefix": "*",
-                        "destinationPortRange": "3389"
-                    }
-                }
-            ]
-        },
-        "subnetName": {
-            "value": "default"
-        },
-        "virtualNetworkName": {
-            "value": "net-fun-windows-server-vnet"
-        },
-        "addressPrefixes": {
-            "value": [
-                "10.0.0.0/16"
-            ]
-        },
-        "subnets": {
-            "value": [
-                {
-                    "name": "default",
-                    "properties": {
-                        "addressPrefix": "10.0.0.0/24"
-                    }
-                }
-            ]
-        },
-        "publicIpAddressName1": {
-            "value": "net-fun-windows-server-ip"
-        },
-        "publicIpAddressType": {
-            "value": "Static"
-        },
-        "publicIpAddressSku": {
-            "value": "Standard"
-        },
-        "pipDeleteOption": {
-            "value": "Delete"
-        },
-        "virtualMachineName": {
-            "value": "net-fun-windows-server"
-        },
-        "virtualMachineName1": {
-            "value": "net-fun-windows-server"
-        },
-        "virtualMachineComputerName1": {
-            "value": "net-fun-windows"
-        },
-        "virtualMachineRG": {
-            "value": "net-fun-bootcamp"
-        },
-        "osDiskType": {
-            "value": "Premium_LRS"
-        },
-        "osDiskDeleteOption": {
-            "value": "Delete"
-        },
-        "virtualMachineSize": {
-            "value": "Standard_B2s"
-        },
-        "nicDeleteOption": {
-            "value": "Delete"
-        },
-        "hibernationEnabled": {
-            "value": false
-        },
-        "adminUsername": {
-            "value": "adminuser"
-        },
-        "adminPassword": {
-            "value": null
-        },
-        "patchMode": {
-            "value": "AutomaticByPlatform"
-        },
-        "enablePeriodicAssessment": {
-            "value": "ImageDefault"
-        },
-        "enableHotpatching": {
-            "value": true
-        },
-        "rebootSetting": {
-            "value": "IfRequired"
-        },
-        "virtualMachine1Zone": {
-            "value": "1"
-        }
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "eastus2"
+    },
+    "vmName": {
+      "value": "netfunwin25"
+    },
+    "vmSize": {
+      "value": "Standard_D2s_v3"
+    },
+    "adminUsername": {
+      "value": "adminuser"
+    },
+    "adminPassword": {
+      "value": "Testing123456!"
+    },
+    "publicIpSku": {
+      "value": "Basic"
+    },
+    "osDiskStorageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "imagePublisher": {
+      "value": "MicrosoftWindowsServer"
+    },
+    "imageOffer": {
+      "value": "WindowsServer"
+    },
+    "imageSku": {
+      "value": "2025-datacenter-azure-edition"
+    },
+    "imageVersion": {
+      "value": "latest"
+    },
+    "vnetAddressPrefix": {
+      "value": "10.0.0.0/16"
+    },
+    "subnetAddressPrefix": {
+      "value": "10.0.0.0/24"
     }
+  }
 }
