@@ -67,3 +67,32 @@ Download installer from [Cisco Networking Academy](https://www.bing.com/ck/a?!&&
 6. turn Service on
 
 ![DHCP Server Services Settings](./assets/dhcp_server_services_settings.png)
+
+- Configure IP
+1. Open CLI on PC
+```sh
+ipconfig
+ipconfig /renew
+```
+***Packet being sent from PC - Discover/Layer 7***
+![Packet generated from PC](./assets/packet_sent_from_pc.png)
+
+DHCP has four steps: DORA
+- D - discover
+- O - Offer
+- R - Request
+- A - Acknowledge
+
+In the packet image:
+- Layer 7 - The DHCP client constructs a Discover packet and sends it out.
+- Layer 4 - The device encapsulates the PDU into an UDP segment.
+- Layer 3 - The port does not have an IP address.
+          - The packet payload is a DHCP UDP segment. The device sets the source address to the zero IP address.
+          - The destination IP address is in the same subnet. The device sets the next-hop to destination.
+- Layer 2 - The next-hop IP address is a broadcast. The ARP process sets the frame's destination MAC address to the broadcast MAC address.
+          - The device encapsulates the PDU into an Ethernet frame.
+- Layer 1 - FastEthernet0 sends out the frame.
+
+## IP is assigned to PC
+
+![IP Assigned](./assets/packet_tracer_ip_assigned.png)
