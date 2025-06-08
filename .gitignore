@@ -1,0 +1,29 @@
+# Terraform local state files
+*.tfstate
+*.tfstate.backup
+
+# Crash logs
+crash.log
+
+# CLI override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Sensitive variable files (if you keep credentials or secrets here)
+*.tfvars
+
+# Terraform directory with plugins, modules, etc.
+.terraform/
+
+# Your private key
+*.pem
+
+# Mac/Linux editor swap or backup files
+*~
+*.swp
+
+# IDE folders (e.g. VSCode)
+.vscode/
+.idea/
