@@ -1,10 +1,6 @@
 # Packet Tracer Lab
 
-## Download and Install Packet Tracer
-Download installer from [Cisco Networking Academy](https://www.bing.com/ck/a?!&&p=c3af7d46554d0c99981569c1e40798ecb8ecea640d39e574ba2e3b2c4627ff38JmltdHM9MTc0OTI1NDQwMA&ptn=3&ver=2&hsh=4&fclid=01621e3e-e315-6f18-29c0-0a6ae2026e91&psq=download+cisco+packet+tracer&u=a1aHR0cHM6Ly93d3cubmV0YWNhZC5jb20vY2lzY28tcGFja2V0LXRyYWNlcg&ntb=1)
-
-
-## Create Network
+## State of the Network
 
 - On Packet Tracer, network will consist of:
 1. 1 Router
@@ -15,6 +11,18 @@ Download installer from [Cisco Networking Academy](https://www.bing.com/ck/a?!&&
 - Configure Router
 1. Select Router
 2. Select CLI
-   
-- Configure DHCP
-- Configure IP
+3. Configure DHCP
+4. Configure IP
+
+### Description:
+- PC sends a broadcast packet to the switch.
+- Because it's a broadcast packet, it will leave the switch and go to both the DHCP server and the Router.
+- Only the DHCP server will send a response because it is listening on port 67 and the router is not
+- Sends a Gratuitous ARP for 192.168.0.1, but it fails
+- DHCP server sends back an "offer" to the PC, via the switch.
+- The PC agrees to the offer (.102) back to the DHCP
+- The DHCP server then sends back a message that the IP has been assigned to the PC.
+- The PC now sends out a gratuitous ARP to alert of it's new IP.
+
+![State of Network](./assets/state_of_network.png)
+
