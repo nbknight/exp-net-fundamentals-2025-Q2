@@ -30,6 +30,16 @@ variable "my_ip_cidr" {
   type        = string
 }
 
+variable "python_port" {
+  description = "Port for Python WebSite"
+  type        = string
+}
+
+variable "anywhere_cidr" {
+  description = "0.0.0.0/0 when it needs to be used"
+  type        = string
+}
+
 variable "instance_count" {
   description = "Number of Windows instances"
   type        = number

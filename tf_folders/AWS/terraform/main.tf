@@ -76,6 +76,14 @@ resource "aws_security_group" "win_sg" {
     cidr_blocks = [var.vpc_cidr]
   }
 
+  ingress {
+    description = "Python Site"
+    from_port   = var.python_port
+    to_port     = var.python_port
+    protocol    = "tcp"
+    cidr_blocks = [var.anywhere_cidr]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
