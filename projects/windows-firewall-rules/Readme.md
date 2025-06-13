@@ -10,6 +10,7 @@ python -m http.server 8000
 
 ```sh
 curl http://<windows_ip>:8000
+example: curl http://34.193.213.234:8000/
 ```
 
 ## Set a new firewall rule for blocking the port
